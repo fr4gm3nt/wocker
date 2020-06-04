@@ -37,7 +37,7 @@ RUN set -x \
     && php composer-setup.php --install-dir=/usr/local/bin --filename=composer \
     && php -r "unlink('composer-setup.php');"
 
-RUN curl -sL https://deb.nodesource.com/setup_12.x -o nodesource_setup.sh && \
+RUN curl -sL https://deb.nodesource.com/setup_10.x -o nodesource_setup.sh && \
     bash nodesource_setup.sh && \ 
     apt-get -y --force-yes install nodejs && \
     npm install n -g
